@@ -1,0 +1,139 @@
+$highlight: #15d4b3;
+$highlight2: #142b27;
+
+$background: #222;
+
+$bg-base: #111;
+$bg-mid: lighten($bg-base, 8%);
+$bg-side: lighten($bg-base, 5%);
+$bg-trackbar: lighten($bg-base, 12%);
+
+$border-color: #333;
+$border-light: #888;
+$border-dark: #111;
+
+$color: rgb(255, 255, 255);
+$color10: darken($color, 10%);
+$color25: darken($color, 25%);
+$color40: darken($color, 40%);
+$color60: darken($color, 60%);
+$color80: darken($color, 80%);
+$colorH: darken($highlight, 15%);
+
+
+.color {
+    color: $color;
+}
+
+.color10 {
+    color: $color10;
+}
+
+.color25 {
+    color: $color25;
+}
+
+.color40 {
+    color: $color40;
+}
+
+.color60 {
+    color: $color60;
+}
+
+.color80 {
+    color: $color80;
+}
+
+.colorH {
+    color: $colorH;
+}
+
+.bg-mid {
+    background-color: $bg-mid;
+}
+
+.bg-trackbar {
+    background-color: $bg-trackbar;
+}
+
+.bg-trackbar3 {
+    background-color: lighten($bg-trackbar, 3);
+}
+
+.bg-trackbar8 {
+    background-color: lighten($bg-trackbar, 8);
+}
+
+.bg-side {
+    background-color: $bg-side;
+}
+
+
+.highlight-bg {
+    background-color: $highlight;
+}
+
+.highlight-color {
+    color: $highlight;
+}
+
+.highlight-border {
+    border-color: $highlight;
+}
+
+.app-border {
+    border-color: $border-color !important;
+    border-style: solid !important;
+}
+.app-border-top {
+    border-top:1px solid $border-color !important;
+}
+.app-border-left {
+    border-left:1px solid $border-color !important;
+}
+.app-border-right {
+    border-right:1px solid $border-color !important;
+}
+.app-border-bottom {
+    border-bottom:1px solid $border-color !important;
+}
+
+
+.light-border {
+    border-color: $border-light !important;
+    border-style: solid !important;
+}
+.light-border-top {
+    border-top:1px solid $border-light !important;
+}
+.light-border-left {
+    border-left:1px solid $border-light !important;
+}
+.light-border-right {
+    border-right:1px solid $border-light !important;
+}
+.light-border-bottom {
+    border-bottom:1px solid $border-light !important;
+}
+
+.dark-border {
+    border-color: $border-dark !important;
+    border-style: solid !important;
+}
+.dark-border-top {
+    border-top:1px solid $border-dark !important;
+}
+.dark-border-left {
+    border-left:1px solid $border-dark !important;
+}
+.dark-border-right {
+    border-right:1px solid $border-dark !important;
+}
+.dark-border-bottom {
+    border-bottom:1px solid $border-dark !important;
+}
+
+
+
+

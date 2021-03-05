@@ -1,0 +1,628 @@
+
+
+/* structural elements */
+
+#app {
+    display: flex;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+}
+
+#app .navbar {
+    background-color: #15d4b3;
+    height: 8px;
+}
+
+.app-footer {
+    margin-top: 0 !important;
+}
+
+
+#app .player-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Users & User Menu */
+.user-menu { 
+    background-color: #393939;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color;
+    font-size: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.user-menu:hover {
+    background-color: #555;
+    cursor: pointer;
+}
+
+.user-menu-avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: $bg-mid;
+    margin-right: 9px;
+    background-size: cover;
+    background-position: center;
+}
+
+.user-list-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: $bg-mid;
+    background-size: cover;
+    background-position: center;
+    margin-right: 14px;
+}
+
+.user-setting-item {
+    margin: 3px;
+    padding: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #666;
+    font-size: 12px;
+}
+
+/* Accordion */
+.accordion-tab {
+    padding: 14px 20px; 
+    text-align:center; 
+    color: $color10;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    border-top: 1px solid $border-color;
+}
+
+.accordion-tab:hover {
+    background-color: lighten($bg-mid, 10);
+}
+
+.accordion-content {
+    transition: flex 200ms;
+    flex: 0;
+    display: flex;
+    overflow: hidden;
+    background-color: darken($bg-side, 2);
+    border-bottom: 1px solid $bg-mid;
+}
+
+.accordion-content.active {
+    flex: 1;
+}   
+
+
+
+
+/* Search Items */
+.search-item-artist {
+    padding: 10px;
+    border-top: 1px solid #555;
+}
+
+.search-item-album {
+    border: 0px solid #555;
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.search-album-cover {
+    width: 140px;
+    height: 140px;
+    background-position:center;
+    background-size:cover; 
+}
+
+.search-album-cover-artist {
+    width: 140px;
+    height: 140px;
+    background-position:center;
+    background-size:cover; 
+    border-radius: 70px;
+}
+
+.search-link {
+
+}
+
+.search-link:hover {
+    color: $color;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.track-table {
+    width: 100%;
+}
+
+.track-table th, .track-table td {
+    padding: 10px;
+}
+
+.track-table tr:nth-child(even) {
+    background-color: $bg-side;
+}
+
+/* DJ LIST and DJ SLOTS */
+.dj_container {
+    display: flex; 
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.become_dj {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    width: 130px; 
+    height: 100px;
+    margin: 0px;
+    position: absolute;
+    right: 0; top: 0;
+
+}
+
+
+
+.dj_slot{
+    margin: 0px 0px;
+    border-right: 1px solid $bg-mid;
+}
+
+.dj_slot:first-child {
+    border-left: 1px solid $bg-mid;
+}
+
+#app .empty_icon {
+    height: 100px;
+    width: 100px;    
+    display: flex;
+    font-size: 30px;
+    color: $bg-mid;
+    justify-content:center; 
+    align-items:center; 
+    background-color: lighten($bg-trackbar, 3%); 
+    transition: background-color 200ms;
+}
+
+#app .dj_caption {
+    text-align: center;
+    color: #ccc;
+    font-size: 10px;
+    padding: 4px;
+}
+
+#app .dj_filled, .dj_current {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lighten($bg-trackbar, 8%);
+}
+
+#app .dj_portrait {
+    width: 60px;
+    height: 60px; 
+    border-radius: 40px;
+    background-color: #111;
+    border: 1px solid #111;
+    background-size: cover;
+    background-position: center;
+}
+
+#app .dj_current {
+    background-color: darken($highlight, 32%);
+    border: 1px solid $highlight;
+}
+
+#app .dj_current .dj_portrait {
+    border: 1px solid $highlight;
+}
+
+
+/* Track Queue */
+#app .track-queue-item {
+    padding: 12px 12px 12px 6px;
+    font-size: 12px;
+    border-radius: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    background-color: lighten($bg-side, 4%) !important;
+    transition: bbackground-color 200ms;
+    border-bottom: 1px solid $border-color;
+    border-left: 1px solid $border-color !important;
+}
+
+#app .track-queue-item:nth-child(even) {
+    background-color: lighten($bg-side, 2%) !important;
+}
+
+#app .track-queue-item:first-child {
+    border: 1px solid $highlight !important; 
+
+}
+
+
+/* Current Track Info */
+#current_track {
+    background-color: $bg-trackbar;
+    color: $color;
+}
+
+#current_track .trackbar-art {
+    width: 140px;
+    height: 140px;
+    background-color: $bg-mid;
+    background-position: center;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+#current_track .progress-outer {
+    background-color: $bg-mid;
+    height: 8px;
+    flex: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+#current_track .progress-inner {
+    background-color: $color40;
+    height: 8px;
+    border-radius: 4px;
+}
+
+
+/* Trackbar */
+
+#trackbar {
+    height: 75px;
+    background-color: $bg-trackbar;
+    color: $color;
+    display: flex;
+    align-items: stretch;
+}
+
+#trackbar .trackbar-art {
+    width: 55px;
+    height: 55px;
+    background-color: $bg-mid;
+    background-position: center;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+#trackbar .progress-outer {
+    background-color: $bg-mid;
+    height: 8px;
+    flex: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+#trackbar .progress-inner {
+    background-color: $color40;
+    height: 8px;
+    border-radius: 4px;
+}
+
+#trackbar .volume-toggle {
+    width: 20px;
+    font-size: 12px;
+    margin-right: 12px;
+    color: #aaa; 
+    cursor: pointer;
+}
+
+#trackbar .volume-toggle:hover {
+    color: $color;
+}
+
+/* Layout Components */
+#app {
+    background-color: #111;
+}
+
+#app .player-container-inner {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+#app .player-mid {
+    flex: 1;
+    background-color: $bg-mid;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+
+}
+#app .player-sb-left {
+    width: 300px;
+    background-color: $bg-side;
+}
+
+#app .player-sb-right {
+    width: 300px;
+    padding: 0px;
+    background-color: $bg-side;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Tabs */
+
+
+
+#app .content-header {
+    padding: 14px 20px; 
+    text-align:center; 
+    color: $color10;
+    font-size: 12px;
+    border-bottom: 1px solid #333;
+}
+
+#app .top-tab {
+    padding: 14px 25px; 
+    text-align:center; 
+    color: $color40;
+    font-size: 12px;
+    border-right: 1px solid #333;
+    background-color: lighten($bg-trackbar, 4%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#app .top-tab:hover {
+    background-color: lighten($bg-trackbar, 10%);
+    cursor: default;
+    color: $color;
+}
+
+#app .top-tab.active {
+    background-color: $bg-mid;
+    color: $color10;
+}
+
+#app .top-tab.top-tab-spacer {
+    background-color: $bg-trackbar;
+}
+
+
+#app .room-tab {
+    padding: 14px 25px; 
+    text-align:center; 
+    color: $color40;
+    font-size: 12px;
+    border-right: 1px solid #333;
+    background-color: darken($bg-trackbar, 1.5%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 4px solid $bg-mid;
+}
+
+#app .room-tab:hover {
+    background-color: lighten($bg-trackbar, 3%);
+    color: $color;
+    cursor: default;
+}
+
+#app .room-tab.active {
+    background-color: lighten($bg-trackbar, 0%);
+    color: $color10;
+}
+
+#app .room-tab.room-tab-spacer {
+    background-color: darken($bg-trackbar, 3%);
+}
+
+
+#app .list-group-item {
+    background-color: transparent;
+    color: $color10;
+    border-color: #444;
+}
+
+#app ::placeholder {
+    color: #aaa;
+}
+
+#app .ctrl-button {
+    font-size: 9px;
+    color: #999; 
+    border-color: transparent;
+}
+
+#app .form-control {
+    background-color: lighten($bg-trackbar, 8%);
+    color: #ccc;
+    border-color: lighten($bg-trackbar, 8%);
+}
+
+.modal-outer {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,.7);
+    flex-direction: column;
+    z-index: 999;
+}
+
+.modal-inner {
+    width: 50%;
+    min-width: 500px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    height: 300px;
+    flex: 1;
+    background-color: $bg-trackbar;
+    overflow: auto;
+}
+
+.modal-view {
+
+}
+
+#app .player-action-btn {
+    border-color: #444;
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+}
+
+#app .bottom-share .react-share__ShareButton {
+    margin-right: 6px;
+}
+
+
+.breadcrumb {
+    background-color: transparent;
+    border-radius: 0px;
+}
+
+.breadcrumb-item.active {
+    color: $color10;
+}
+
+.applink {
+    color: $highlight;
+    cursor: pointer;
+}
+
+.applink:hover {
+    text-decoration: underline;
+    color: #008b8d;
+}
+
+.stealthlink {
+    cursor: pointer;
+}
+
+.stealthlink:hover {
+    color: $color;
+    text-decoration: underline;
+}
+
+.card .list-group-item {
+    border-color: #304444 !important;
+}
+
+
+.wizard-step {
+    display:flex;
+    flex-direction:column; 
+    align-items:center;
+    margin-right: 30px;
+    color: #555; 
+    font-size: 12px;
+}
+
+.wizard-step .wiz-num {
+    width: 30px;
+    height: 30px; 
+    border-radius: 4px;
+    border: 1px solid #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+.wizard-step.active {
+    color: #ccc;
+}
+
+.wizard-step.active .wiz-num {
+    border: 1px solid #888;
+}
+
+.banner-fade {
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    box-shadow: inset 0px -160px 158px 0px $bg-mid;
+}
+
+.user-avatar {
+    display: inline-block;
+    background-size :cover;
+    background-position: center;
+    background-color : $bg-mid;
+}
+
+.now_playing_meta .summary a {
+    display: none;
+}
+
+
+.avatar-face {
+    position: relative;
+
+}
+
+.avatar-face-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+.avatar-swatch {
+    background-image: url('/static/images/avatar/head1.png');
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+}
+
+@keyframes bob {
+    0%   {top: 0px;}
+    50%  {top:10px;}
+    100% {top: 0px;}
+  }
+
+
+
+
+
+/* Media Queries */
+
+@media (max-width: 1099px) {
+
+    .player-sb-left {display: none !important;}
+    .player-sb-right {display: none !important;}
+}
